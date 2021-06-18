@@ -1,9 +1,10 @@
 import decimal
 
+
 def decimalize(data):
     try:
         if type(data) in [int, float]:
-            return(decimal.Decimal(data))
+            return decimal.Decimal(data)
         elif type(data) == list:
             for ii, _ in enumerate(data):
                 data[ii] = decimal.Decimal(data[ii])
